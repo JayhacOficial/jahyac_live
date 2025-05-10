@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAYHAC LIVE</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      background: black;
+    }
+    .video-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .logo {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+    .logo img {
+      width: 100px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 20px 0 10px;
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+    p {
+      font-style: italic;
+      font-size: 1.2rem;
+      animation: pulse 2s infinite;
+    }
+    .buttons {
+      margin-top: 30px;
+    }
+    .buttons button {
+      margin: 10px;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+    }
+    .google { background: #db4437; }
+    .facebook { background: #3b5998; }
+    .phone { background: #4caf50; }
+
+    .slogan {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      font-style: italic;
+      background: rgba(0,0,0,0.4);
+      padding: 10px 15px;
+      border-radius: 8px;
+      animation: pulse 2s infinite, glow 3s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ffd700; }
+      to { text-shadow: 0 0 20px #ffffff; }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <video class="video-bg" autoplay muted loop>
+    <source src="https://cdn.coverr.co/videos/coverr-evening-beach-4787/1080p.mp4" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/03/01/audio_2e3b1ad296.mp3?filename=calm-waves-140383.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio autoplay>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8e8b77aa5b.mp3?filename=phoenix-call-112397.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="logo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Phoenix_Bird_Logo.png/600px-Phoenix_Bird_Logo.png" alt="JAYHAC Logo">
+  </div>
+
+  <div class="overlay">
+    <h1>Bienvenido a JAYHAC LIVE</h1>
+    <p>Aquí no solo ganas… aquí renaces.</p>
+    <div class="buttons">
+      <button class="google">Entrar con Google</button>
+      <button class="facebook">Entrar con Facebook</button>
+      <button class="phone">Entrar con Teléfono</button>
+    </div>
+    <div class="slogan">Aquí no solo ganas… aquí renaces.</div>
+  </div>
+
+</body>
+</html>
